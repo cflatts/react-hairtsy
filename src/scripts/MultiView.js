@@ -61,7 +61,7 @@ var ItemsContainer = React.createClass ({
         // console.log('listing array', listArray)
         var newJsxArray =[]
         listArray.forEach(function(item) {
-            // console.log(item)
+            console.log(item)
             newJsxArray.push(<Item itemModel = {item} />)
         })
         return newJsxArray
