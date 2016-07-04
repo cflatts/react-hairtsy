@@ -85,6 +85,8 @@ var Item = React.createClass ({
         return (
             <div className = 'itemContainer'>
                 <div className = 'title'> {this.props.itemModel.get('title')}</div>
+                <img src = {this.props.itemModel.get('Images')[0].url170x135} />
+                <div className = 'price'>{this.props.itemModel.get('price')}</div>
             </div>
             )
     }
