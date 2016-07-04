@@ -77,8 +77,14 @@ var ItemsContainer = React.createClass ({
 })
 
 var Item = React.createClass ({
-    render: function() {
+    _toSingleView: function() {
+        location.hash = `detail/${this.props.itemModel.get('listing_id')}`
+    },
 
+    render: function() {
+        return (
+            <div className = 'title'>Hello</div>
+            )
     }
 })
 
