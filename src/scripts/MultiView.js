@@ -54,12 +54,18 @@ var SearchBar = React.createClass ({
 
 var ItemsContainer = React.createClass ({
     _getJsxArray: function (listArray) {
-        console.log('list array >>>', listArray)
+        console.log('listing array', listArray)
+        var newJsxArray =[]
+        listArray.forEach(function(item) {
+            console.log(item)
+            newJsxArray.push(<Item itemModel = {item} />)
+        })
+        return newJsxArray
     },
 
     render: function () {
         return (
-            <div className = 'ItemsContainer'>
+            <div className = 'itemContainer'>
                 <h1>Hello</h1>
             </div>)
     }
