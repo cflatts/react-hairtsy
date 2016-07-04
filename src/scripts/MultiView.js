@@ -23,7 +23,7 @@ var MultiView = React.createClass ({
             <div className = 'multiView'>
                 <Header />
                 <SearchBar />
-                <ItemsContainer itemsColl = {this.state.coll} />
+                <ItemsContainer itemsColl = {this.props.coll} />
             </div>
             )
     }
@@ -38,18 +38,29 @@ var Header = React.createClass ({
 })
 
 var SearchBar = React.createClass ({
+    _searchForItem: function (evt) {
+        if(evt.keyCode ===13) {
+            location.hash = `search/${evt.target.value}`
+            evt.target.value = ''
+        }
+    },
+
     render: function () {
         return (
-            <input placeholder = 'What would you like to search for?'/>
+            <input onKeyDown = {this._searchForItem} placeholder = 'What would you like to search for?'/>
             )
     }
 })
 
 var ItemsContainer = React.createClass ({
+    _getJsxArray: function (listArray) {
+        console.log('list array >>>', listArray)
+    },
+
     render: function () {
         return (
             <div className = 'ItemsContainer'>
-
+                <h1>Hello</h1>
             </div>)
     }
 })
