@@ -61,7 +61,7 @@ var ItemsContainer = React.createClass ({
         // console.log('listing array', listArray)
         var newJsxArray =[]
         listArray.forEach(function(item) {
-            // console.log(item)
+            console.log(item)
             newJsxArray.push(<Item itemModel = {item} />)
         })
         return newJsxArray
@@ -69,7 +69,7 @@ var ItemsContainer = React.createClass ({
 
     render: function () {
         return (
-            <div className = 'itemContainer'>
+            <div className = 'allContainer'>
                 {this._getJsxArray(this.props.itemsColl.models)}
             </div>
             )
@@ -83,7 +83,9 @@ var Item = React.createClass ({
 
     render: function() {
         return (
-            <div className = 'title'>Hello</div>
+            <div className = 'itemContainer'>
+                <div className = 'title'> {this.props.itemModel.get('title')}</div>
+            </div>
             )
     }
 })
