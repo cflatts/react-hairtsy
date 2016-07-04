@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 
 var SingleView = React.createClass ({
     render: function () {
+        console.log(this.props.itemModel.attributes)
         return (
             <div className = 'singleItemContainer'>
                 <div className = 'singleTitle'>{this.props.itemModel.get('title')}</div>
@@ -13,8 +14,3 @@ var SingleView = React.createClass ({
 })
 
 export default SingleView
-
-
-// <div className = 'title'> {this.props.itemModel.get('title')}</div>
-//                 <img src = {this.props.itemModel.get('Images')[0].url_170x135}/>
-//                 <div className = 'price'>{this.props.itemModel.get('price')}</div>

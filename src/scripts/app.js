@@ -43,21 +43,6 @@ const app = function() {
             '*default': 'backToHome'
         },
 
-        doSearch: function(query) {
-
-            var searchCollection = new MultiCollection()
-            searchCollection.fetch({
-                dataType: 'jsonp',
-                data: {
-                    includes: 'Images,Shop',
-                    api_key: 'ls49cw4bk576jhmk3kyeljdf',
-                    keywords: query
-                }
-            }).then(function(){
-                ReactDOM.render(<MultiView itemsColl = {searchCollection} />, document.querySelector('.container'))
-            })
-        },
-
         showSingleView: function(id) {
             var singleModel = new SingleModel()
 
@@ -83,6 +68,21 @@ const app = function() {
             })
             ReactDOM.render(<MultiView itemsColl = {multiColl} />, document.querySelector('.container'))
 
+        },
+
+        doSearch: function(query) {
+
+            var searchCollection = new MultiCollection()
+            searchCollection.fetch({
+                dataType: 'jsonp',
+                data: {
+                    includes: 'Images,Shop',
+                    api_key: 'ls49cw4bk576jhmk3kyeljdf',
+                    keywords: query
+                }
+            }).then(function(){
+                ReactDOM.render(<MultiView itemsColl = {searchCollection} />, document.querySelector('.container'))
+            })
         },
 
         backToHome: function() {

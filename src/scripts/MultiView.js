@@ -43,7 +43,7 @@ var Header = React.createClass ({
 var SearchBar = React.createClass ({
     _searchForItem: function (evt) {
         if(evt.keyCode ===13) {
-            location.hash = `search/${evt.target.value}`
+            location.hash = 'search/' + evt.target.value
             evt.target.value = ''
         }
     },
@@ -61,7 +61,7 @@ var ItemsContainer = React.createClass ({
         // console.log('listing array', listArray)
         var newJsxArray =[]
         listArray.forEach(function(item) {
-            console.log(item)
+            // console.log(item)
             newJsxArray.push(<Item itemModel = {item} />)
         })
         return newJsxArray
@@ -78,7 +78,7 @@ var ItemsContainer = React.createClass ({
 
 var Item = React.createClass ({
     _toSingleView: function() {
-        location.hash = `detail/${this.props.itemModel.get('listing_id')}`
+        location.hash = '#details' + {this.props.itemModel.get('listing_id')
     },
 
     render: function() {
