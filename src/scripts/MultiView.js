@@ -1,5 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Backbone from 'backbone'
+import $ from 'jquery'
+
+Backbone.$ = $
 
 var MultiView = React.createClass ({
     // console.log(this)
@@ -42,10 +46,11 @@ var Header = React.createClass ({
 
 var SearchBar = React.createClass ({
     _searchForItem: function (evt) {
-        if(evt.keyCode ===13) {
-            location.hash = 'search/' + evt.arget.val
+        if(evt.keyCode === 13) {
+            location.hash = 'search/' + evt.target.value
             evt.target.value = ''
         }
+        console.log(evt)
     },
 
     render: function () {
@@ -62,8 +67,10 @@ var ItemsContainer = React.createClass ({
         var newJsxArray =[]
         listArray.forEach(function(item) {
             // console.log(item)
-            newJsxArray.push(<Item itemModel = {item} />)
+            newJsxArray.push(<Item itemModel = {item} />
+            )
         })
+        // console.log(newJsxArray)
         return newJsxArray
     },
 
@@ -77,8 +84,9 @@ var ItemsContainer = React.createClass ({
 })
 
 var Item = React.createClass ({
+
     _toSingleView: function() {
-        location.hash = `details/${this.props.itemModel.get('listing_id')}`
+        location.hash= 'details/' + this.props.itemModel.get('listing_id')
     },
 
     render: function() {

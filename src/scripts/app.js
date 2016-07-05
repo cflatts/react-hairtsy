@@ -44,7 +44,7 @@ const app = function() {
         },
 
         showSingleView: function(id) {
-            var singleModel = new SingleModel()
+            var singleModel = new SingleModel(id)
 
             singleModel.fetch({
                 dataType: 'jsonp',
@@ -53,6 +53,7 @@ const app = function() {
                     api_key: 'ls49cw4bk576jhmk3kyeljdf'
                 }
             }).then(function() {
+                console.log(singleModel)
                 ReactDOM.render(<SingleView itemModel = {singleModel} />, document.querySelector('.container'))
             })
         },
