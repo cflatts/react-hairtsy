@@ -53,7 +53,6 @@ const app = function() {
                     api_key: 'ls49cw4bk576jhmk3kyeljdf'
                 }
             }).then(function() {
-                console.log(singleModel)
                 ReactDOM.render(<SingleView itemModel = {singleModel} />, document.querySelector('.container'))
             })
         },
@@ -81,9 +80,9 @@ const app = function() {
                     api_key: 'ls49cw4bk576jhmk3kyeljdf',
                     keywords: query
                 }
-            }).then(function(){
-                ReactDOM.render(<MultiView itemsColl = {searchCollection} />, document.querySelector('.container'))
             })
+            // console.log(query)
+            ReactDOM.render(<MultiView itemsColl={searchCollection}/>, document.querySelector('.container'))
         },
 
         backToHome: function() {

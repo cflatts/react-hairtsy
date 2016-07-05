@@ -50,8 +50,10 @@ var SearchBar = React.createClass ({
             location.hash = 'search/' + evt.target.value
             evt.target.value = ''
         }
-        console.log(evt)
+        // console.log(evt)
     },
+
+    console.log(this.props)
 
     render: function () {
         return (
