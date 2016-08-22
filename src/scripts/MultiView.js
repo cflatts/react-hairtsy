@@ -10,7 +10,7 @@ var MultiView = React.createClass ({
 
 
     componentWillMount: function () {
-        this.props.itemsColl.on('sync', () => {
+        this.props.itemsColl.on('all', () => {
             this.setState ({
                 coll: this.props.itemsColl
             // Array of models on models attribute of child
@@ -25,7 +25,20 @@ var MultiView = React.createClass ({
         }
     },
 
+    getNewState: function () {
+        return {
+            coll: this.props.itemsColl
+        }
+    },
+
+    componentWillReceiveProps: function (nextProps) {
+        nextProps.itemsColl.on('sync update', () => {
+            this.setState(this.getNewState())
+        })
+    },
+
     render: function () {
+        console.log(this.props)
         return (
             <div className = 'multiView'>
                 <Header />
@@ -45,15 +58,13 @@ var Header = React.createClass ({
 })
 
 var SearchBar = React.createClass ({
+
     _searchForItem: function (evt) {
         if(evt.keyCode === 13) {
             location.hash = 'search/' + evt.target.value
             evt.target.value = ''
         }
-        // console.log(evt)
     },
-
-    console.log(this.props)
 
     render: function () {
         return (
