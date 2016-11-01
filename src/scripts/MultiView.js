@@ -38,7 +38,7 @@ var MultiView = React.createClass ({
     },
 
     render: function () {
-        console.log(this.props)
+        // console.log(this.props)
         return (
             <div className = 'multiView'>
                 <Header />
@@ -52,8 +52,8 @@ var MultiView = React.createClass ({
 var Header = React.createClass ({
     render: function () {
         return (
-            <div className = 'header'><h1>Hairtsy</h1></div>
-            )
+            <div className = 'header'><a href = '#home'><h1>Hairtsy</h1></a></div>
+        )
     }
 })
 

@@ -81,7 +81,7 @@ const app = function() {
                     keywords: query
                 }
             })
-            console.log(query)
+            // console.log(query)
             ReactDOM.render(<MultiView itemsColl = {searchCollection}/>, document.querySelector('.container'))
         },
 
