@@ -5,40 +5,10 @@
     background:lightgrey;
 }
 
-input {
-    text-align: center;
-    font-size: 40px;
-    width: 100%;
-}
-
 a {
-    text-decoration: none;
     font-size: 48px;
-}
-
-.title {
-    font-weight: bold;
-}
-
-.price {
-    width: 50%;
-    text-align: right;
-    display: inline-block;
-}
-
-.itemContainer {
-    width: 30%;
-    border: 7px solid orange;
-    display: inline-block;
-    border-radius: 5%;
-    margin: 1%;
-    padding: 1%;
-    min-height: 100%;
-    cursor: pointer;
-}
-
-.itemContainer img{
-    padding: 1%;
+    text-decoration: none;
+    margin-left: 10%;
 }
 
 /* SINGLE VIEW */
