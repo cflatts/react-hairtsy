@@ -33,7 +33,6 @@ input:focus {
 }
 
 .allContainer {
-    border: 3px solid red;
     text-align: center;
 }
 
@@ -43,16 +42,19 @@ input:focus {
     border-radius: 7%;
     display: inline-block;
     margin: 1% 3%;
+
+    img {
+        width: 100%;
+        height: 150px;
+        border-radius: 5%;
+    }
 }
 
-.itemContainer img {
-    width: 100%;
-    height: 150px;
-    border-radius: 5%;
-}
+.itemContainer {
 
-.itemContainer .title, .price {
-    display: none;
+    .title, .price {
+        display: none;
+    }
 }
 
 /* SINGLE VIEW */
