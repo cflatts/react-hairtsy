@@ -52,7 +52,7 @@ var MultiView = React.createClass ({
 var Header = React.createClass ({
     render: function () {
         return (
-            <div className = 'header'><a href = '#home'><h1>Hairtsy</h1></a></div>
+            <div className = 'header'><a href = '#home'>Hairtsy</a></div>
         )
     }
 })
