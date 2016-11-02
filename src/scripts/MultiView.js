@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Backbone from 'backbone'
 import $ from 'jquery'
+import Header from './header'
 
 Backbone.$ = $
 
@@ -49,13 +50,7 @@ var MultiView = React.createClass ({
     }
 })
 
-var Header = React.createClass ({
-    render: function () {
-        return (
-            <div className = 'header'><a href = '#home'>Hairtsy</a></div>
-        )
-    }
-})
+
 
 var SearchBar = React.createClass ({
 
