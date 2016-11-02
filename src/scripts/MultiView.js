@@ -107,7 +107,7 @@ var Item = React.createClass ({
             <div className = 'itemContainer' onClick = {this._toSingleView}>
                 <div className = 'title'> {this.props.itemModel.get('title')}</div>
                 <img src = {this.props.itemModel.get('Images')[0].url_170x135}/>
-                <div className = 'price'>{this.props.itemModel.get('price')}</div>
+                <div className = 'price'>${this.props.itemModel.get('price')}</div>
 
             </div>
             )
