@@ -59,7 +59,7 @@ input:focus {
     opacity: 0.7;
     transform: scale(1.1, 1.1);
     transition: transform 1s ease;
-    position: realtive;
+
 
     img {
         transform: scale(0.5, 0.5)
@@ -70,7 +70,7 @@ input:focus {
         background: orange;
         display: block;
         font-size: 18px;
-        position: relative;
+
     }
 }
 
@@ -87,23 +87,28 @@ input:focus {
         font-weight: bold;
         font-size: 20px;
         width: 80%;
-        margin: 1% auto;
+        margin: 1% auto 5%;
     }
 
     .singleDescription {
-        font-size: 12px;
+        font-size: 16px;
+        display: inline-block;
+        width: 90%;
+        margin-top: 5%;
+        height: 150px;
+        overflow: auto;
     }
 
     .singlePrice {
         display: inline-block;
         width: 15%;
-        font-size: 1px;
+        font-size: 18px;
+
     }
 
     img {
         width: 50%;
         margin: auto;
-        padding: 5%;
     }
 
 }
